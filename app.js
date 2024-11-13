@@ -6,15 +6,29 @@ export class Main{
     };
 
     fiveHoursClock(number){
-        let lampsOn = Math.floor(number / 5);
+        let lampA = Math.floor(number / 5);
         
-        if(lampsOn === 1) return 'AXXX';
+        if(lampA === 1) return 'AXXX';
 
-        if(lampsOn === 2) return 'AAXX';
+        if(lampA === 2) return 'AAXX';
 
-        if(lampsOn === 3) return 'AAAX';
+        if(lampA === 3) return 'AAAX';
 
-        if(lampsOn === 4) return 'AAAA';
+        if(lampA === 4) return 'AAAA';
+
+        return 'XXXX';
+    };
+
+    oneHourClock(number){
+        let lampA = number % 5;  // Représente les heures restantes après les blocs de 5 heures
+
+        if(lampA===1) return 'AXXX';
+
+        if(lampA===2) return 'AAXX';
+
+        if(lampA===3) return 'AAAX';
+
+        if(lampA===4) return 'AAAA';
 
         return 'XXXX';
     };
