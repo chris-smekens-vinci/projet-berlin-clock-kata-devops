@@ -72,10 +72,8 @@ export class Main{
 
         if(lampA===3) return 'AAAX';
 
-        if(lampA===4) return 'AAAAX';
+        if(lampA===4) return 'AAAA';
 
-        if(lampA===5) return 'AAAAA';
-
-        return 'XXXXX';
+        return 'XXXX';
     };
 };

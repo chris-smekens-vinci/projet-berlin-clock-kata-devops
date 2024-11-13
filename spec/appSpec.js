@@ -141,19 +141,19 @@ describe("A suite of tests for the clock function of the main class", function (
         expect(result).toBe('AXXX');
     });
 
-    it('one minute clock function should return AAAX when the minutes is 2', () => {
+    it('one minute clock function should return AAXX when the minutes is 2', () => {
         let result = main.oneMinuteClock(2);     
+        expect(result).toBe('AAXX');
+    });
+
+    it('one minute clock function should return AAAX when the minutes is 3', () => {
+        let result = main.oneMinuteClock(3);     
         expect(result).toBe('AAAX');
     });
 
-    it('one minute clock function should return AAAA when the minutes is 3', () => {
-        let result = main.oneMinuteClock(3);     
-        expect(result).toBe('AAAA');
-    });
-
-    it('one minute clock function should return XXXX when the minutes is 4', () => {
+    it('one minute clock function should return AAAA when the minutes is 4', () => {
         let result = main.oneMinuteClock(4);     
-        expect(result).toBe('XXXX');
+        expect(result).toBe('AAAA');
     });
 
 });
