@@ -167,4 +167,17 @@ describe("A suite of tests for the clock function of the main class", function (
             oneMinute: 'AAXX'
         });
     });
+
+    // // tests pour berlinClock failure
+    // it('should return the correct Berlin Clock representation for 00:00:00', () => {
+    //     let result = main.berlinClock(0, 0, 0);
+    //     expect(result).toEqual({
+    //         seconds: 'X',
+    //         fiveHours: 'XXXX',
+    //         oneHour: 'XXXX',
+    //         fiveMinutes: 'XXXXXXXXXXX',
+    //         oneMinute: 'XXXX'
+    //     });
+    // });
+
 });
