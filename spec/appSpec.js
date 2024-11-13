@@ -62,5 +62,70 @@ describe("A suite of tests for the clock function of the main class", function (
         expect(result).toBe('AAAA');
     });
     
+    // tests pour fiveMinutesClock
 
+    it('five minutes clock function should return XXXXXXXXXXX when the minutes is 0', () => {
+        let result = main.fiveMinutesClock(0);     
+        expect(result).toBe('XXXXXXXXXXX');
+    });
+
+    it('five minutes clock function should return AXXXXXXXXXX when the minutes is 5', () => {
+        let result = main.fiveMinutesClock(5);     
+        expect(result).toBe('AXXXXXXXXXX');
+    });
+
+    it('five minutes clock function should return AAXXXXXXXXX when the minutes is 10', () => {
+        let result = main.fiveMinutesClock(10);     
+        expect(result).toBe('AAXXXXXXXXX');
+    });
+
+    it('five minutes clock function should return AAAXXXXXXXX when the minutes is 15', () => {
+        let result = main.fiveMinutesClock(15);     
+        expect(result).toBe('AAAXXXXXXXX');
+    });
+
+    it('five minutes clock function should return AAAAXXXXXXX when the minutes is 20', () => {
+        let result = main.fiveMinutesClock(20);     
+        expect(result).toBe('AAAAXXXXXXX');
+    });
+
+    it('five minutes clock function should return AAAAAAXXXXX when the minutes is 25', () => {
+        let result = main.fiveMinutesClock(25);     
+        expect(result).toBe('AAAAAXXXXXX');
+    });
+
+    it('five minutes clock function should return AAAAAAAXXXX when the minutes is 30', () => {
+        let result = main.fiveMinutesClock(30);     
+        expect(result).toBe('AAAAAAXXXXX');
+    });
+
+    it('five minutes clock function should return AAAAAAAAXXX when the minutes is 35', () => {
+        let result = main.fiveMinutesClock(35);     
+        expect(result).toBe('AAAAAAAXXXX');
+    });
+
+    it('five minutes clock function should return AAAAAAAAAXX when the minutes is 40', () => {
+        let result = main.fiveMinutesClock(40);     
+        expect(result).toBe('AAAAAAAAXXX');
+    });
+
+    it('five minutes clock function should return AAAAAAAAAAX when the minutes is 45', () => {
+        let result = main.fiveMinutesClock(45);     
+        expect(result).toBe('AAAAAAAAAXX');
+    });
+
+    it('five minutes clock function should return AAAAAAAAAA when the minutes is 50', () => {
+        let result = main.fiveMinutesClock(50);     
+        expect(result).toBe('AAAAAAAAAAX');
+    });
+
+    it('five minutes clock function should return XXXXXXXXXXX when the minutes is 55', () => {
+        let result = main.fiveMinutesClock(55);     
+        expect(result).toBe('AAAAAAAAAAA');
+    });
+
+    it('five minutes clock function should return XXXXXXXXXXX when the minutes is 60', () => {
+        let result = main.fiveMinutesClock(60);     
+        expect(result).toBe('XXXXXXXXXXX');
+    });
 });

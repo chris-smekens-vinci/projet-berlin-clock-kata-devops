@@ -32,4 +32,35 @@ export class Main{
 
         return 'XXXX';
     };
+
+    fiveMinutesClock(number){
+        let lampA = Math.floor(number / 5);  // Nombre de blocs de 5 minutes
+
+        // 12 return = bloc de 5 minutes (60 minutes)
+
+        if(lampA===1) return 'AXXXXXXXXXX';
+
+        if(lampA===2) return 'AAXXXXXXXXX';
+
+        if(lampA===3) return 'AAAXXXXXXXX';
+
+        if(lampA===4) return 'AAAAXXXXXXX';
+
+        if(lampA===5) return 'AAAAAXXXXXX';
+
+        if(lampA===6) return 'AAAAAAXXXXX';
+
+        if(lampA===7) return 'AAAAAAAXXXX';
+
+        if(lampA===8) return 'AAAAAAAAXXX';
+
+        if(lampA===9) return 'AAAAAAAAAXX';
+
+        if(lampA===10) return 'AAAAAAAAAAX';
+
+        if(lampA===11) return 'AAAAAAAAAAA';
+
+        return 'XXXXXXXXXXX';
+    };
+
 };
