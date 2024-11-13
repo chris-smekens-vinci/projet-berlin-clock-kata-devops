@@ -6,74 +6,32 @@ export class Main{
     };
 
     fiveHoursClock(number){
-        let lampA = Math.floor(number / 5);
-        
-        if(lampA === 1) return 'AXXX';
-
-        if(lampA === 2) return 'AAXX';
-
-        if(lampA === 3) return 'AAAX';
-
-        if(lampA === 4) return 'AAAA';
-
-        return 'XXXX';
+        let lampA = Math.floor(number / 5);  // Nombre de blocs de 5 heures
+        /*
+        la méthode repeat permet de répéter une chaine de caractères un certain nombre de fois, si lampA = 3 alors 'A'.repeat(lampA) = 'AAA' 
+        et ensuite si le nombre max est 4 alors on ajoute des 'X' pour compléter la chaine de caractère --> 'AAAX'
+        */
+        return 'A'.repeat(lampA) + 'X'.repeat(4 - lampA);    
     };
 
     oneHourClock(number){
         let lampA = number % 5;  // Représente les heures restantes après les blocs de 5 heures
-
-        if(lampA===1) return 'AXXX';
-
-        if(lampA===2) return 'AAXX';
-
-        if(lampA===3) return 'AAAX';
-
-        if(lampA===4) return 'AAAA';
-
-        return 'XXXX';
+        return 'A'.repeat(lampA) + 'X'.repeat(4 - lampA);
     };
 
-    fiveMinutesClock(number){
+    fiveMinutesClock(number) {
         let lampA = Math.floor(number / 5);  // Nombre de blocs de 5 minutes
+        let lamps = '';
+        if (lampA === 12) return 'X'.repeat(11);
 
-        // 12 return = bloc de 5 minutes (60 minutes)
+        for (let i = 1; i <= 11; i++) {
+            lamps += i <= lampA ? 'A' : 'X';
+        }
+        return lamps;
+    }
 
-        if(lampA===1) return 'AXXXXXXXXXX';
-
-        if(lampA===2) return 'AAXXXXXXXXX';
-
-        if(lampA===3) return 'AAAXXXXXXXX';
-
-        if(lampA===4) return 'AAAAXXXXXXX';
-
-        if(lampA===5) return 'AAAAAXXXXXX';
-
-        if(lampA===6) return 'AAAAAAXXXXX';
-
-        if(lampA===7) return 'AAAAAAAXXXX';
-
-        if(lampA===8) return 'AAAAAAAAXXX';
-
-        if(lampA===9) return 'AAAAAAAAAXX';
-
-        if(lampA===10) return 'AAAAAAAAAAX';
-
-        if(lampA===11) return 'AAAAAAAAAAA';
-
-        return 'XXXXXXXXXXX';
-    };
-
-    oneMinuteClock(number){
-        let lampA =  number % 5;  // Représente les minutes restantes après les blocs de 5 minutes
-
-        if(lampA===1) return 'AXXX';
-
-        if(lampA===2) return 'AAXX';
-
-        if(lampA===3) return 'AAAX';
-
-        if(lampA===4) return 'AAAA';
-
-        return 'XXXX';
-    };
+    oneMinuteClock(number) {
+        let lampA = number % 5;  // Représente les minutes restantes après les blocs de 5 minutes
+        return 'A'.repeat(lampA) + 'X'.repeat(4 - lampA);
+    }
 };
