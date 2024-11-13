@@ -63,4 +63,19 @@ export class Main{
         return 'XXXXXXXXXXX';
     };
 
+    oneMinuteClock(number){
+        let lampA =  number % 5;  // Représente les minutes restantes après les blocs de 5 minutes
+
+        if(lampA===1) return 'AXXX';
+
+        if(lampA===2) return 'AAXX';
+
+        if(lampA===3) return 'AAAX';
+
+        if(lampA===4) return 'AAAAX';
+
+        if(lampA===5) return 'AAAAA';
+
+        return 'XXXXX';
+    };
 };
