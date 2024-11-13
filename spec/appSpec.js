@@ -3,7 +3,7 @@ import { Main } from '../app.js';
 describe("A suite of tests for the clock function of the main class", function () {
     let main = new Main();
 
-    // Tests pour secondClock
+    // Tests for secondClock
     it('second clock function should return A when the number is pair', () => {
         let result = main.secondClock(2);     
         expect(result).toBe('A');
@@ -13,7 +13,7 @@ describe("A suite of tests for the clock function of the main class", function (
         expect(result).toBe('X');
     });
 
-    // Tests pour fiveHoursClock
+    // Tests for fiveHoursClock
     it('five hours clock function should return XXXX when the hours is 0', () => {
         let result = main.fiveHoursClock(0);     
         expect(result).toBe('XXXX');
@@ -34,13 +34,13 @@ describe("A suite of tests for the clock function of the main class", function (
         let result = main.fiveHoursClock(20);     
         expect(result).toBe('AAAA');
     });
-    // afin de tester la valeur maximale de l'heure (24) 
+    // In order to test the maximum value of the hour (24) 
     it('five hours clock function should return AAAA when the hours is 24', () => {
         let result = main.fiveHoursClock(24);     
         expect(result).toBe('AAAA');
     });
 
-    // Tests pour oneHourClock
+    // Tests for oneHourClock
     it('one hour clock function should return XXXX when the hours is 0', () => {
         let result = main.oneHourClock(0);     
         expect(result).toBe('XXXX');
@@ -62,7 +62,7 @@ describe("A suite of tests for the clock function of the main class", function (
         expect(result).toBe('AAAA');
     });
     
-    // tests pour fiveMinutesClock
+    // tests for fiveMinutesClock
 
     it('five minutes clock function should return XXXXXXXXXXX when the minutes is 0', () => {
         let result = main.fiveMinutesClock(0);     
@@ -129,7 +129,7 @@ describe("A suite of tests for the clock function of the main class", function (
         expect(result).toBe('XXXXXXXXXXX');
     });
 
-    // Tests pour oneMinuteClock
+    // Tests for oneMinuteClock
 
     it('one minute clock function should return XXXX when the minutes is 0', () => {
         let result = main.oneMinuteClock(0);     
@@ -156,7 +156,7 @@ describe("A suite of tests for the clock function of the main class", function (
         expect(result).toBe('AAAA');
     });
 
-    // tests pour berlinClock
+    // tests for berlinClock
     it('should return the correct Berlin Clock representation for 12:34:56', () => {
         let result = main.berlinClock(19, 42, 56);
         expect(result).toEqual({
@@ -168,7 +168,7 @@ describe("A suite of tests for the clock function of the main class", function (
         });
     });
 
-    // // tests pour berlinClock failure
+    // // tests for berlinClock failure
     // it('should return the correct Berlin Clock representation for 00:00:00', () => {
     //     let result = main.berlinClock(0, 0, 0);
     //     expect(result).toEqual({

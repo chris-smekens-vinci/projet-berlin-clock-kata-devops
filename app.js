@@ -1,26 +1,27 @@
 export class Main{
-    // 'A' signfie que la lampe est allumée et 'X' signifie qu'elle est éteinte.
+    // ‘A’ means the lamp is on, and ‘X’ means it is off.”
     secondClock(number){
         if (number % 2 === 0) return 'A';
         return 'X';
     };
 
     fiveHoursClock(number){
-        let lampA = Math.floor(number / 5);  // Nombre de blocs de 5 heures
+        let lampA = Math.floor(number / 5);  // Number of 5 hours blocks
         /*
-        la méthode repeat permet de répéter une chaine de caractères un certain nombre de fois, si lampA = 3 alors 'A'.repeat(lampA) = 'AAA' 
-        et ensuite si le nombre max est 4 alors on ajoute des 'X' pour compléter la chaine de caractère --> 'AAAX'
+            The repeat method allows repeating a string a certain number of times. 
+            For example, if lampA = 3, then 'A'.repeat(lampA) = 'AAA'.
+            Then, if the max number is 4, we add 'X' to complete the string --> 'AAAX'.
         */
         return 'A'.repeat(lampA) + 'X'.repeat(4 - lampA);    
     };
 
     oneHourClock(number){
-        let lampA = number % 5;  // Représente les heures restantes après les blocs de 5 heures
+        let lampA = number % 5;  // Represents the remaining hours after the 5 hours blocks
         return 'A'.repeat(lampA) + 'X'.repeat(4 - lampA);
     };
 
     fiveMinutesClock(number) {
-        let lampA = Math.floor(number / 5);  // Nombre de blocs de 5 minutes
+        let lampA = Math.floor(number / 5);  // Number of 5 minutes blocks
         let lamps = '';
         if (lampA === 12) return 'X'.repeat(11);
 
@@ -28,12 +29,12 @@ export class Main{
             lamps += i <= lampA ? 'A' : 'X';
         }
         return lamps;
-    }
+    };
 
     oneMinuteClock(number) {
-        let lampA = number % 5;  // Représente les minutes restantes après les blocs de 5 minutes
+        let lampA = number % 5;  // Represents the remaining minutes after the  5 minutes blocks
         return 'A'.repeat(lampA) + 'X'.repeat(4 - lampA);
-    }
+    };
 
     berlinClock(hours, minutes, seconds) {
         return {
@@ -43,6 +44,6 @@ export class Main{
             fiveMinutes: this.fiveMinutesClock(minutes),
             oneMinute: this.oneMinuteClock(minutes)
         };
-    }
+    };
 
 };
