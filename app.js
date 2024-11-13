@@ -34,4 +34,15 @@ export class Main{
         let lampA = number % 5;  // Représente les minutes restantes après les blocs de 5 minutes
         return 'A'.repeat(lampA) + 'X'.repeat(4 - lampA);
     }
+
+    berlinClock(hours, minutes, seconds) {
+        return {
+            seconds: this.secondClock(seconds),
+            fiveHours: this.fiveHoursClock(hours),
+            oneHour: this.oneHourClock(hours),
+            fiveMinutes: this.fiveMinutesClock(minutes),
+            oneMinute: this.oneMinuteClock(minutes)
+        };
+    }
+
 };

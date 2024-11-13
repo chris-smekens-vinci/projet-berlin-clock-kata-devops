@@ -156,4 +156,15 @@ describe("A suite of tests for the clock function of the main class", function (
         expect(result).toBe('AAAA');
     });
 
+    // tests pour berlinClock
+    it('should return the correct Berlin Clock representation for 12:34:56', () => {
+        let result = main.berlinClock(19, 42, 56);
+        expect(result).toEqual({
+            seconds: 'A',
+            fiveHours: 'AAAX',
+            oneHour: 'AAAA',
+            fiveMinutes: 'AAAAAAAAXXX',
+            oneMinute: 'AAXX'
+        });
+    });
 });
